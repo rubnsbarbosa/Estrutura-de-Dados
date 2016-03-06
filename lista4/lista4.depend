@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1456882378 source:/home/rubens/Documentos/Engenharia da Computacao/2015.2/Estrutura de dados/Prof Ernani/listas/lista4/main.c
+	<stdio.h>
+	<stdlib.h>
+
