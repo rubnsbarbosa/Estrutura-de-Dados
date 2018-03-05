@@ -1,19 +1,3 @@
-//
-//  main.c
-//  GLCM (Gray Level Cooccurence Matrix) Algorithm
-//
-//  Created by Rubens Santos Barbosa on 01/06/17.
-//  Copyright © 2017 Rubens Santos Barbosa. All rights reserved.
-// 
-//  No terminal siga os seguintes comandos
-//  $ gcc main.c -lm -o main.o
-//  $ ./main lena.pgm
-//  
-//  Para uso desse algoritmo a imagem devera ser quadrada por exemplo: 512x512 pixels
-//  Porque a matriz, obrigatoriamente, eh quadrada
-//
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -37,21 +21,6 @@ int main(int argc, char **argv)
 	{
 		//  Pra entrar nesse else o nome da imagem tem que ser digitado corretamente na linha de comando
 		unsigned char buffer = 0;
-
-		//  Como a extensão do arquivo é PGM (Portable GrayMap) temos que pegar o header/cabeçalho da imagem
-		//  O header dos arquivos PGM são do seguinte padrão:
-		//  P5
-		//  512 512
-		//  255
-		//  Os caracteres P5 identificam o formato PGM. A largura da figura (55 pixels) e sua altura (55 pixels). O terceiro inteiro
-		//  corresponde ao valor máximo da escala de cinza. Para o nosso caso, sempre será 255 (1 byte). Após o header, seguem os dados
-		//  da imagem, um conjunto de inteiros positivos menores que 256, correspondendo às tonalidades dos pixels, dispostos linha a
-		//  linha.
-		//
-		//  O tom de cada pixel é representado por um inteiro de 8 bits. O branco corresponde a 255, o preto, a 0.
-		//  Qualquer outro inteirointermediário corresponde a uma tonalidade de cinza, sendo os mais claros próximos de 255,
-		//  os mais escuros próximos a 0. O gradiente de tons tem, portanto, 256 possibilidades diferentes.
-
 		//  Descarta o header desnecessario do arquivo pgm
 		while(getc(file) != '\n');
       	while(getc(file) == '#');
