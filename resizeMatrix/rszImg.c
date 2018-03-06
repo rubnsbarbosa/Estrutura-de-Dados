@@ -35,7 +35,17 @@ int main()
 		printf("\n");
 	}
 	
+	// codigo celso/glauber
+	int matrizdeci[2][4], k = 0, l = 0;
+	for(i=0,j=0;i<row;i+=2,j++){
+        for(k=0,l=0;k<col;k += 2,l++){
+            matrizdeci[j][l] = matriz[i][k];
+        }
+    }
+
+
 	// get vector X
+/*
 	int vetorX[8], pixelX = 0;
 	for (i = 0; i < row; i = i + 2)
 		for (j = 0; j < col; j = j + 2) 
@@ -47,22 +57,23 @@ int main()
 	for(i=0; i < pixelX; i++)
 		printf("\n%d ", vetorX[i]);
 
-
+*/
 
 	// get matrix decimization
+/*
 	int matrixDeci[2][4];
 	for (i = 0; i < pixelX; i++)
 	{
 		matrixDeci[i/col][i%col] = vetorX[i];
 	}
-		
+*/		
 
 	printf("\n\n");
 	for(i=0; i<2; i++)
 	{
 		for(j=0; j<4; j++)
 		{
-			printf("%d	", matrixDeci[i][j]);
+			printf("%d	", matrizdeci[i][j]);
 		}
 		printf("\n");
 	}
